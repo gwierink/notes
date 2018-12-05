@@ -1,4 +1,4 @@
-# Install notes OpenFOAM on CentOS 7.5
+# Install notes OpenFOAM on CentOS 7.6
 #### Install notes
 Following the notes of [openfoamwiki](https://openfoamwiki.net/index.php/Installation/Linux/OpenFOAM-6/CentOS_SL_RHEL#CentOS_7.5_.281804.29) below, installing OpenFOAM -6 from the OpenFOAM git repository on CentOS 7.6.1810 x86_64 more or less worked out of the box.
 
