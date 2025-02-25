@@ -40,5 +40,6 @@ Source: https://en.opensuse.org/SDB:Audio_troubleshooting
 ### Packages
 ```bash
 sudo zypper in \
-  git octave
+  git octave rstudio \
+  python3-numpy python3-matplotlib
 ```
