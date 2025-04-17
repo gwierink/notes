@@ -1,4 +1,26 @@
 # Linux install notes
+
+## Debian 12
+### Basic packages
+```bash
+sudo apt install \
+    gedit vim ufw git octave \
+    python3-numpy python3-matplotlib
+```
+### Obsidian
+Download the deb package from https://obsidian.md/download and set up a place
+for your tools (if not done already):
+```bash
+mkdir ~/tools/obsidian && cd !$
+mv ~/Downloads/obsidian_1.8.9_amd64.deb .
+sudo dpkg -i obsidian*.deb
+```
+In case the system complains about missing dependencies, do
+```bash
+sudo apt --fix-broken install
+```
+
+
 ## OpenSUSE-15.6 Leap
 ### Basic system setup
 **Changing hostname**
