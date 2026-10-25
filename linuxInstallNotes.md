@@ -1,5 +1,63 @@
 # Linux install notes
 
+## Debian 13
+Update the system
+```bash
+sudo apt update && sudo apt upgrade
+```
+
+### Security
+**Clamav  antivirus**
+Test whether clamav exists
+```bash
+clamscan --version
+freshclam --version
+```
+
+If these commands are missing, install the applications:
+```bash
+sudo apt install clamav clamav-daemon clamav-freshclam
+```
+
+**Using clamav**
+Check the status
+```bash
+systemctl status clamav-freshclam
+```
+
+Inspect the database by
+```bash
+sudo freshclam
+```
+
+Enable automatic updates
+```bash
+sudo systemctl enable --now clamav-freshclam
+```
+
+Check the results
+```bash
+systemctl is-enabled clamav-freshclam
+systemctl is-active clamav-freshclam
+```bash
+
+Start clamav
+```bash
+sudo systemctl enble --now clamav-daemon
+```
+
+Check status
+```bash
+systemctl status clamav-daemon --no-pager
+```
+
+**ufw firewall**
+Check whether installed and active
+```bash
+sudo ufw status verbose
+```
+
+
 ## Debian 12
 ### Basic packages
 ```bash
