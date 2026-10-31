@@ -57,6 +57,40 @@ Check whether installed and active
 sudo ufw status verbose
 ```
 
+### Bit torrent
+uBittorrent is good, but Transmission is lighter
+```bash
+sudo apt install -y transmission-daemon transmission-cli
+```
+
+### Printer-scanner
+For a standard 64 bit system (tested on Debian 13),
+[this guide](https://blog.oldo.org/2025/08/13/install-epson-scan-2-on-debian/)
+worked.
+
+The guide explains:
+* Go to http://support.epson.net/linux/en/epsonscan2.php
+* Click “Download” button for “deb” distribution type, “64bit(x86_64)” architecture
+* Download of file like “epsonscan2-bundle-6.7.80.0.x86_64.deb.tar.gz” should start
+
+Once the file is fully downloaded:
+```bash
+tar xvzf epsonscan2-bundle-6.7.80.0.x86_64.deb.tar.gz
+cd epsonscan2-bundle-6.7.80.0.x86_64.deb
+sudo ./install.sh
+```
+
+Now, the application should work from the graphics applications, or from the
+terminal as:
+```bash
+epsonscan2
+```
+
+If "libQt5Widgets.so.5" is missing, install it:
+```bash
+sudo apt install libqt5widgets5
+```
+
 
 ## Debian 12
 ### Basic packages
